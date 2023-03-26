@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Styling*/
+/*Mobile first design*/
+html * {
+	box-sizing: border-box;
+	font-family: 'Chivo', sans-serif;
+}
+html {
+	box-sizing: border-box;
+	height: 100vh;
+}
+:root {
+	font-size: 18px;
+	font-family: 'Chivo', sans-serif;
+}
+
+body {
+	background: url(./assets/mobile/image-host.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+/*	position: relative;*/
+}
+
+.logo {
+	margin: 3.44rem ;
+	text-align: center;
+}
+.request-email-component {
+	margin: 1.33rem;
+}
+.request-email-component-title {
+	font-size: 1.44rem;
+	font-weight: 300;
+	line-height: 2.1rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+.request-email-component-title-one {
+	color: hsla(157, 74%, 62%, 1.0);	
+}
+.request-email-component-title-two {
+	color: white;
+}
+.request-email-component-description {
+	margin-top: 1rem;
+	font-size: 0.83rem;
+	line-height: 1.38rem;
+	text-align: center;
+	color: hsla(224, 40%, 83%, 1.0);
+}
+.request-email-component-icons {
+	margin: 2rem 0;
+}
+.request-email-component-icons a {
+	display: inline-block;
+	width: 20%;
+}
+.request-email-component-icons img {
+	width: 90%;
+	margin: 0 1.5rem;
+}
+
+#google-podcast-icon {
+	transform: translateY(-50%);
+}
+
+.request-email-component-form {
+	position: relative;
+	margin: 0 1.33rem;
+}
+.request-email-component-form .email-input {
+	margin: 0;
+	box-sizing: border-box;
+	width: 100%;
+	border-radius: 28px;
+	padding: .5rem 0 .5rem 1.7rem;
+	outline: none;
+	border: none;
+	background-color: #2C344B;
+	color: white;
+}
+.email-input::placeholder {
+	color: white;
+	font-weight: 400;
+	line-height: 1.75rem;
+	font-family: Chivo;
+	font-size: .77rem;
+}
+
+.request-email-component-form .submit-button {
+	width: 100%;
+	border-radius: 28px;
+	outline: none;
+	border: none;
+	margin-top: 1rem;
+	padding: .5rem;
+	text-align: center;
+	background-color: hsla(157, 74%, 62%, 1.0);
+	color: hsla(224, 35%, 11%, 1.0);
+	font-weight: 400;
+	font-family: Chivo, sans-serif;
+}
+.submit-button:hover {
+	background-color: hsla(157, 74%, 62%, 1.0);
+}
+.request-email-component-form .error-message {
+		display: none;
+		color: red;
+		font-size: .6rem;
+		margin-top: .4rem;
+		margin-left: 1.7rem;
+}
+
+@media only screen and (max-width:759px){
+	body::before {
+	content: '';
+	background-color: rgba(0, 0, 0, .85);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+}
+@media only screen and (min-width: 760px) {
+	body {
+		background: hsla(224, 35%, 11%, 1.0);
+		display: block;
+	}
+	body::before {
+		content: '';
+		background: url(./assets/tablet/image-host.jpg) no-repeat;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 63%;
+		height: 75%;
+		z-index: -1;
+	}
+	body::after {
+		content: '';
+		background: url(./assets/desktop/bg-pattern-dots.svg) no-repeat;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 30%;
+		height: 10%;
+		z-index: -1;
+	}
+	.logo{
+		margin-left: 1.5rem;
+		text-align: left;
+	}
+	.request-email-component {
+		background-color: hsla(224, 35%, 11%, 1.0);
+		margin: 7rem 1.5rem;
+		width: 76%;
+		padding: 5rem 0;
+	}
+	.request-email-component-title {
+		text-align: left;
+		font-size: 2.6rem;
+		line-height: 3.110rem;
+		font-weight: 300;
+	}
+	.request-email-component-description{
+		text-align: left;
+		font-size: 1rem;
+		line-height: 1.55rem;
+	}
+	.request-email-component-form {
+		margin: 2.5rem 0;
+	}
+	.request-email-component-form .email-input {
+		padding: 1rem 0 1rem 1.7rem;
+	}
+	.request-email-component-form .submit-button {
+		position: absolute;
+		margin: 0;
+		width: 38%;
+		right: 2%;
+		top: 15%;
+	}
+}
+@media only screen and (min-width: 1200px){
+	body::before {
+		content: '';
+		background: url(./assets/desktop/image-host.jpg) no-repeat;
+		position: absolute;
+		right: -5%;
+		top: 14%;
+		width: 61%;
+		height: 71%;
+		z-index: -1;
+	}
+	body::after {
+		content: '';
+		background: url(./assets/desktop/bg-pattern-dots.svg) no-repeat;
+		position: absolute;
+		left: 80%;
+		bottom: 8%;
+		width: 30%;
+		height: 10%;
+		z-index: 1;
+	}
+	.logo {
+		margin-left: 9rem;
+	}
+	.request-email-component {
+		margin: 5rem 9rem;
+		width: 50%;
+	}
+	.request-email-component-form .submit-button {
+		cursor: pointer;
+	}
+	.request-email-component-form .submit-button:hover {
+		background-color: #B3FFE2;
+	}
+}
